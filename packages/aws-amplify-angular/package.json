@@ -1,19 +1,16 @@
 {
   "$schema": "../../node_modules/ng-packagr/package.schema.json",
-  "name": "aws-amplify-angular",
-  "version": "4.1.8",
+  "name": "@flowaccount/aws-amplify-angular",
+  "version": "4.2.1",
   "description": "AWS Amplify Angular Components",
-  "main": "dist/bundles/aws-amplify-angular.umd.min.js",
-  "module_ivy_ngcc": "__ivy_ngcc__/dist/fesm5/aws-amplify-angular.js",
-  "module": "dist/fesm5/aws-amplify-angular.js",
-  "es2015": "dist/fesm2015/aws-amplify-angular.js",
-  "esm5": "dist/esm5/aws-amplify-angular.js",
-  "esm2015": "dist/esm2015/aws-amplify-angular.js",
-  "fesm5_ivy_ngcc": "__ivy_ngcc__/dist/fesm5/aws-amplify-angular.js",
-  "fesm5": "dist/fesm5/aws-amplify-angular.js",
-  "fesm2015": "dist/fesm2015/aws-amplify-angular.js",
-  "typings": "dist/aws-amplify-angular.d.ts",
-  "metadata": "dist/aws-amplify-angular.metadata.json",
+  "main": "dist/bundles/flowaccount-aws-amplify-angular.umd.min.js",
+  "module": "dist/fesm5/flowaccount-aws-amplify-angular.js",
+  "es2015": "dist/fesm2015/flowaccount-aws-amplify-angular.js",
+  "esm5": "dist/esm5/flowaccount-aws-amplify-angular.js",
+  "esm2015": "dist/esm2015/flowaccount-aws-amplify-angular.js",
+  "fesm5": "dist/fesm5/flowaccount-aws-amplify-angular.js",
+  "fesm2015": "dist/fesm2015/flowaccount-aws-amplify-angular.js",
+  "typings": "dist/flowaccount-aws-amplify-angular.d.ts",
   "sideEffects": false,
   "scripts": {
     "cleantemp": "rimraf coverage dist tmp docs",
@@ -24,9 +21,7 @@
     "build": "ng-packagr -p package.json",
     "build:esm:watch": "ngcc --watch",
     "build:cjs:watch": "echo \"CommonJS modules are not exported in angular. Use target build:esm:watch\"",
-    "format": "echo \"Not implemented\"",
-    "declarations": "ngcc --p es2015 browser module main --first-only --create-ivy-entry-points ./declarations/",
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+    "format": "echo \"Not implemented\""
   },
   "ngPackage": {
     "assets": [
@@ -34,7 +29,7 @@
     ],
     "lib": {
       "entryFile": "index.ts",
-      "umdId": "aws-amplify-angular",
+      "umdId": "@flowaccount/aws-amplify-angular",
       "umdModuleIds": {
         "@aws-amplify/core": "@aws-amplify/core",
         "lodash": "lodash",
@@ -92,10 +87,5 @@
   },
   "peerDependencies": {
     "aws-amplify": "^2.0.0"
-  },
-  "__processed_by_ivy_ngcc__": {
-    "fesm5": "9.0.7",
-    "module": "9.0.7",
-    "typings": "9.0.7"
   }
 }

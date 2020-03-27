@@ -86,7 +86,7 @@ const components = [
 @NgModule({
 	imports: [CommonModule, FormsModule],
 	declarations: [DynamicComponentDirective, ...components],
-	entryComponents: [...components],
+	entryComponents: [],
 	providers: [
 		{
 			provide: 'dynamic-component-service',

@@ -8,14 +8,15 @@
 		// "noImplicitAny": false,
 		"module": "es2015",
 		"moduleResolution": "node",
+		"types": ["node", "jest", "jquery"],
 		"paths": {
 			"@angular/core": ["node_modules/@angular/core"],
 			"rxjs/*": ["node_modules/rxjs/*"]
 		},
 		"rootDir": ".",
-		"outDir": "dist",
-		"sourceMap": true,
-		// "inlineSources": true,
+		"outDir": "dist/out-tsc",
+		"inlineSources": true,
+		"declaration": true,
 		"target": "es5",
 		"skipLibCheck": true,
 		"skipDefaultLibCheck": true,
@@ -24,10 +25,15 @@
 		"esModuleInterop": true,
 		"lib": ["es2015", "dom"]
 	},
-	"include": ["**/*.ts"],
-	"exclude": ["node_modules", "tmp", "declarations"],
-	// "files": ["index.ts", "src/components/interactions/chatbot/aws-lex-audio.js"],
+	// "include": ["**/*.ts"],
+	"exclude": ["node_modules", "tmp", "declarations/*.ts", "**/*.spec.ts"],
+	"files": ["index.ts"], //
 	"angularCompilerOptions": {
-		"strictMetadataEmit": true
+		"annotateForClosureCompiler": true,
+		"skipTemplateCodegen": true,
+		"strictMetadataEmit": true,
+		"fullTemplateTypeCheck": true,
+		"strictInjectionParameters": true,
+		"enableResourceInlining": true
 	}
 }

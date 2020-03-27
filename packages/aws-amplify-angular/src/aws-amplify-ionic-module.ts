@@ -58,7 +58,7 @@ const components = [
 @NgModule({
 	imports: [CommonModule, FormsModule],
 	declarations: [...components],
-	entryComponents: [...components],
+	entryComponents: [],
 	providers: [AmplifyService],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 	exports: [...components],
